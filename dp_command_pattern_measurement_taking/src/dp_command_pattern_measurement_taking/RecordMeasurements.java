@@ -1,5 +1,5 @@
-// This class runs the included code, generating the necessary objects and
-// assigning the MeasurementRecordingStation objects measurement command
+// This is the client class.  It runs the included code, generating the necessary 
+// objects and assigning the MeasurementRecordingStation objects measurement command
 // to the various command objects.
 
 package dp_command_pattern_measurement_taking;
@@ -13,14 +13,14 @@ public class RecordMeasurements {
 		
 		Command command = new TempRecordCommand(tempTaker);
 		station.setMeasurementCommand(command);
-		station.measurementTaken();
+		station.takeMeasurement();
 		
 		command = new HumidityRecordCommand(humidityTaker);
 		station.setMeasurementCommand(command);
-		station.measurementTaken();
+		station.takeMeasurement();
 		
 		command = new AtmoPressureRecordCommand(atmoPressureTaker);
 		station.setMeasurementCommand(command);
-		station.measurementTaken();
+		station.takeMeasurement();
 	}
 }
